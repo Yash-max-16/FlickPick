@@ -29,9 +29,9 @@ movies = pd.DataFrame(movies_dict)
 
 similarity = pickle.load(open('similarity.pkl','rb'))
 # write some comments
-st.title('Movies Recommender')
+st.title('FlickPick')
 user_selected_movie = st.selectbox(
-    'Select your movie',
+    'Select movie from the options below and we will recommend you similar movies',
     movies['title'].values
 )
 if st.button('Recommend'):
